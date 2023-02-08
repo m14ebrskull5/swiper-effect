@@ -1,10 +1,10 @@
 import { useDeferredValue } from 'react';
 
 function ProductList({ products }) {
-  const deferredProducts = useDeferredValue(products);
+  // const deferredProducts = useDeferredValue(products);
   return (
     <ul>
-      {deferredProducts.map((product) => (
+      {products.map((product) => (
         <li>{product}</li>
       ))}
     </ul>

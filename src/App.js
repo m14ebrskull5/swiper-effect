@@ -1,8 +1,8 @@
-import { useState, useTransition } from 'react';
+import { useState, useTransition, startTransition } from 'react';
 
 import { generateProducts } from './data';
 import ProductList from './components/ProductList';
-
+import { Button, DatePicker, Space, version } from "antd";
 const dummyProducts = generateProducts();
 
 function filterProducts(filterTerm) {
@@ -13,23 +13,15 @@ function filterProducts(filterTerm) {
 }
 
 function App() {
-  const [isPending, startTransition] = useTransition();
-  const [filterTerm, setFilterTerm] = useState('');
-
-  const filteredProducts = filterProducts(filterTerm);
-
-  function updateFilterHandler(event) {
-    // startTransition(() => {
-    //   setFilterTerm(event.target.value);
-    // });
-    setFilterTerm(event.target.value);
-  }
+  
 
   return (
     <div id="app">
-      <input type="text" onChange={updateFilterHandler} />
-      {/* {isPending && <p style={{color: 'white'}}>Updating List...</p>} */}
-      <ProductList products={filteredProducts} />
+      <h1>antd version: {version}</h1>
+      <Space style={{margin: "2rem"}}>
+        <DatePicker />
+        <Button type="primary">Primary Button</Button>
+      </Space>
     </div>
   );
 }
