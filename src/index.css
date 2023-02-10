@@ -16,7 +16,66 @@
 }
 
 #components-layout-demo-custom-trigger .logo {
+  overflow: hidden;
   height: 32px;
-  margin: 16px;
-  background: rgba(255, 255, 255, 0.3);
+  width: 100%;
+  margin: 16px auto;
+  background-clip: content-box;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-flex;
+  justify-content: center;
 }
+#components-layout-demo-custom-trigger .logo img {
+  height: 100%;
+  margin-inline-end: 12px;
+}
+#components-layout-demo-custom-trigger .logo span {
+  line-height: 32px;
+  font-size: 24px;
+}
+#components-layout-demo-custom-trigger .dropdown {
+  margin-right: 40px;
+}
+.right-content {
+  width: 400px;
+  display: flex;
+  flex-basis: content;
+  column-gap: 60px;
+}
+/* #myAvatar {
+  transition: transform 0.3s ease-in 0s;
+}
+#myAvatar:hover{
+  transform: scale(1.8) translateY(10px) translateX(-10px);
+  z-index: 2;
+} */
+#myAvatar {
+  position: relative;
+}
+#myAvatar .pop-over-avatar {
+  position: absolute;
+  top: 40px;
+  left: -20px;
+  z-index: 4;
+  transform: scale(2.5);
+}
+#myAvatar .pop-over-container {
+  transition: all 0.3s ease-in 0s;
+  box-shadow: 0 0 30px #0000001a;
+  border-radius: 9px;
+  border: 1px solid #ccc;
+  position: absolute;
+  background-color: #FFFFFF;
+  
+  width: 250px;
+  left: -130px;
+  height:300px;
+  z-index: 3;
+  top: 90px;
+}
+#myAvatar .hover-animate-active {
+  transform: translateY(-20px);
+  opacity: 1;
+}
+

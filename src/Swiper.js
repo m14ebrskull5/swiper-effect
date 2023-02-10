@@ -11,7 +11,6 @@ const Swiper = () => {
     const timeout = 400
     useEffect(() => {
         setItem((item) => data)
-
     }, [])
 
     const onMouseOver = (e) => {
@@ -20,7 +19,6 @@ const Swiper = () => {
         let id = e.currentTarget.dataset.id
         if (!a.classList.contains('is-hover-active-play')) {
             let start = performance.now()
-            console.log(scaleStack)
             setScaleStack((items) => {
                 return {
                     ...items,
@@ -54,21 +52,14 @@ const Swiper = () => {
 
 
         }
-        // }, 300))
-
-
-
-
     }
     const onMouseLeave = (e) => {
-        
         let a = e.currentTarget
         let id = e.currentTarget.dataset.id
         a.classList.remove("is-hover-active-play")
         if(performance.now() - scaleStack[id].t < timeout) {
             clearTimeout(scaleStack[id].c)
         }
-        
     }
     return <>
         <div id="home_v3_module_page_switch" className="home-page-switch-wrapper inner-content-wrapper">

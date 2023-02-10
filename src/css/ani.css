@@ -1129,7 +1129,7 @@
 }
 
 #home_v3_module_page_switch.home-page-switch-wrapper.inner-content-wrapper {
-    margin-top: 56px
+    /* margin-top: 56px */
 }
 
 #home_v3_module_page_switch.home-page-switch-wrapper .inner-content-head {
@@ -1288,9 +1288,6 @@
     overflow: hidden
 }
 
-#home_v3_module_page_switch.home-page-switch-wrapper.inner-content-wrapper {
-    margin-top: 56px
-}
 
 #home_v3_module_page_switch.home-page-switch-wrapper .inner-content-head {
     margin: 12px 0
@@ -3097,7 +3094,7 @@
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    margin-top: 56px;
+    margin-top: 16px;
     margin-bottom: 56px
 }
 
@@ -3361,9 +3358,7 @@
     }
 }
 
-#home_v3_module_page_switch.home-page-switch-wrapper.inner-content-wrapper {
-    margin-top: 56px
-}
+
 
 #home_v3_module_page_switch.home-page-switch-wrapper .inner-content-head {
     margin: 12px 0
@@ -3378,7 +3373,7 @@
     display: -ms-flexbox;
     display: flex;
     overflow: hidden;
-    margin: 12px 0
+    margin: 0px 0
 }
 
 #home_v3_module_page_switch.home-page-switch-wrapper .inner-content-body-container .inner-content-body.page-from-left {
@@ -3510,9 +3505,7 @@
     }
 }
 
-#home_v3_module_page_switch.home-page-switch-wrapper.inner-content-wrapper {
-    margin-top: 56px
-}
+
 
 #home_v3_module_page_switch.home-page-switch-wrapper .inner-content-head {
     margin: 12px 0
@@ -3527,7 +3520,7 @@
     display: -ms-flexbox;
     display: flex;
     overflow: hidden;
-    margin: 12px 0
+    margin: 0px 0
 }
 
 #home_v3_module_page_switch.home-page-switch-wrapper .inner-content-body-container .inner-content-body.page-from-left {
@@ -3659,9 +3652,6 @@
     }
 }
 
-#home_v3_module_page_switch.home-page-switch-wrapper.inner-content-wrapper {
-    margin-top: 56px
-}
 
 #home_v3_module_page_switch.home-page-switch-wrapper .inner-content-head {
     margin: 12px 0
@@ -3676,7 +3666,7 @@
     display: -ms-flexbox;
     display: flex;
     overflow: hidden;
-    margin: 12px 0
+    margin: 0px 0
 }
 
 #home_v3_module_page_switch.home-page-switch-wrapper .inner-content-body-container .inner-content-body.page-from-left {
@@ -3871,7 +3861,7 @@
     cursor: pointer
 }
 
-.close-btn[data-v-c024c730] {
+.close-btn{
     width: 40px;
     height: 40px;
     margin-top: 12px;
@@ -3886,7 +3876,7 @@
 
 body {
     background-color: #fff;
-    min-height: 1000px
+    /* min-height: 1000px */
 }
 
 a,
@@ -4158,7 +4148,7 @@ body {
 
     .b-footer-wrap,
     .inner-content-wrapper {
-        margin: 0 60px
+        margin: 0 10px
     }
 
     .inner-content-wrapper .inner-content-item-v5 {
@@ -4256,7 +4246,7 @@ body {
     }
 
     .inner-content-wrapper {
-        width: 1180px;
+        width: 1280px;
         margin: 0 auto
     }
 
@@ -4357,7 +4347,7 @@ body {
     }
 
     .inner-content-wrapper {
-        margin: 0 60px
+        margin: 0 10px
     }
 
     .inner-content-wrapper .inner-content-item {
@@ -4456,7 +4446,7 @@ body {
     }
 
     .inner-content-wrapper {
-        margin: 0 140px
+        margin: 0 0px
     }
 
     .inner-content-wrapper .inner-content-item {
