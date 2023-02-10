@@ -741,30 +741,30 @@
 }
 
 @media screen and (max-width:1659.8px) {
-    .title[data-v-5888b1d7] {
+    .title {
         font-size: 14px
     }
 }
 
 @media screen and (min-width:1660px) and (max-width:1919.8px) {
-    .title[data-v-5888b1d7] {
+    .title {
         font-size: 14px
     }
 }
 
 @media screen and (min-width:1920px) and (max-width:2559.8px) {
-    .title[data-v-5888b1d7] {
+    .title {
         font-size: 14px
     }
 }
 
 @media screen and (min-width:2560px) {
-    .title[data-v-5888b1d7] {
+    .title {
         font-size: 16px
     }
 }
 
-.home-cell-desc-title[data-v-5888b1d7] {
+.home-cell-desc-title {
     font-weight: 500;
     font-size: 15px;
     color: #18191c;
@@ -781,11 +781,11 @@
     user-select: none
 }
 
-.home-cell-desc-title[data-v-5888b1d7]:hover {
+.home-cell-desc-title:hover {
     color: #0cb6f2
 }
 
-.home-cell-desc-subtitle[data-v-5888b1d7] {
+.home-cell-desc-subtitle {
     display: block;
     white-space: nowrap;
     -o-text-overflow: ellipsis;
@@ -797,8 +797,8 @@
     user-select: none
 }
 
-.home-cell-desc-subtitle[data-v-5888b1d7],
-.with-up-space[data-v-5888b1d7] {
+.home-cell-desc-subtitle,
+.with-up-space {
     font-size: 13px;
     color: rgba(0, 0, 0, .5);
     width: 100%;
@@ -807,7 +807,7 @@
     line-height: 16px
 }
 
-.with-up-space[data-v-5888b1d7] {
+.with-up-space {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -818,7 +818,7 @@
     cursor: pointer
 }
 
-.with-up-space span[data-v-5888b1d7] {
+.with-up-space span {
     display: inline-block;
     margin-left: 2px;
     width: calc(100% - 18px);
@@ -828,15 +828,15 @@
     text-overflow: ellipsis
 }
 
-.with-up-space[data-v-5888b1d7]:hover {
+.with-up-space:hover {
     color: #0cb6f2
 }
 
-.with-up-space:hover .up-icon path[data-v-5888b1d7] {
+.with-up-space:hover .up-icon path {
     fill: #0cb6f2
 }
 
-.home-cell-desc-tag[data-v-5888b1d7] {
+.home-cell-desc-tag {
     display: inline-block;
     background: rgba(255, 127, 36, .2);
     border-radius: 4px;
@@ -1027,17 +1027,17 @@
     letter-spacing: -2px
 }
 
-.hot-ranking-cell-wrapper .ranking-cell-desc .ranking-cell-index.two {
+.ranking-cell-desc .ranking-cell-index.two {
     font-size: 48px;
     width: 64px
 }
 
-.hot-ranking-cell-wrapper .ranking-cell-desc .ranking-cell-index.three {
+.ranking-cell-desc .ranking-cell-index.three {
     font-size: 44px;
     width: 84px
 }
 
-.hot-ranking-cell-wrapper .ranking-cell-desc .hotranking-content-item-desc {
+.ranking-cell-desc .hotranking-content-item-desc {
     margin-top: 10px;
     display: inline-block;
     -webkit-box-sizing: border-box;

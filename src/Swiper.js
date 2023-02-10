@@ -2,15 +2,15 @@ import { useEffect, useState } from "react"
 import { Button } from "antd"
 import "./css/Swiper.css"
 import "./css/ani.css"
-import kimage from "./img/kubosan.webp"
-import jQuery from 'jquery'
+// import kimage from "./img/kubosan.webp"
+import data from './data/bilibili/week-hot'
 const Swiper = () => {
     let [items, setItem] = useState([])
     let [containerStyle, setStyle] = useState({ justifyContent: "flex-start" })
     let [scaleStack, setScaleStack] = useState({})
     const timeout = 400
     useEffect(() => {
-        setItem((item) => [1, 2, 3, 4, 5, 6])
+        setItem((item) => data)
 
     }, [])
 
@@ -20,6 +20,7 @@ const Swiper = () => {
         let id = e.currentTarget.dataset.id
         if (!a.classList.contains('is-hover-active-play')) {
             let start = performance.now()
+            console.log(scaleStack)
             setScaleStack((items) => {
                 return {
                     ...items,
@@ -75,19 +76,22 @@ const Swiper = () => {
                 <div className="inner-content-body-container">
                     <div className="inner-content-body" style={containerStyle}>
                         {
-                            items.map((k, v) => <div data-id={v} onMouseEnter={onMouseOver} onMouseLeave={onMouseLeave} style={{ marginRight: "15px", background: "rgba(137, 88, 236, 0.1)" }} className="hot-ranking-cell-wrapper inner-content-item is-hover-animation-active" key={k + 'img'}
+                            items.map((k, v) => <div data-id={v} 
+                            onMouseEnter={onMouseOver} onMouseLeave={onMouseLeave} 
+                            style={{ marginRight: "15px", background: "rgba(137, 88, 236, 0.1)" }} 
+                            className="hot-ranking-cell-wrapper inner-content-item is-hover-animation-active" key={v + 'img'}
                             // onMouseOver={onMouseOver}
                             // 
                             >
-                                <div className="ranking-ratio-item-container home_v3_vertical_item_6" style={{ height: "250px" }}>
-                                    <img src={kimage}></img>
+                                <div className="ranking-ratio-item-container" style={{ height: "250px" }}>
+                                    <img src={k.imgSrc}></img>
                                 </div>
                                 <div className="ranking-cell-desc">
                                     <div className="ranking-cell-index" style={{ color: "rgba(234,62,205,0.298)" }}>{v + 1}</div>
                                     <div className="hotranking-content-item-desc">
-                                        <a><div className="home-cell-desc-title">间谍过家家</div></a>
+                                        <a><div className="home-cell-desc-title">{k.title}</div></a>
 
-                                        <div className="hotranking-content-item-desc">散装家庭的爆笑喜剧</div>
+                                        <div className="home-cell-desc-subtitle">{k.desc}</div>
                                     </div>
 
                                 </div>
