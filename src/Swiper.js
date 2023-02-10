@@ -18,11 +18,8 @@ const Swiper = () => {
         let a = e.currentTarget
 
         let id = e.currentTarget.dataset.id
-        // console.log("enter ", id)
-        // setDelayHandler(setTimeout(() => {
         if (!a.classList.contains('is-hover-active-play')) {
             let start = performance.now()
-            console.log("enter ", id)
             setScaleStack((items) => {
                 return {
                     ...items,
@@ -33,7 +30,6 @@ const Swiper = () => {
 
                             if (parseInt(id) > 4) {
                                 setStyle((state) => {
-                                    // state.justifyContent = 'flex-end'
                                     state = {
                                         ...state,
                                         justifyContent: 'flex-end'
@@ -43,7 +39,6 @@ const Swiper = () => {
                     
                             } else {
                                 setStyle((state) => {
-                                    // state.justifyContent = 'flex-end'
                                     state = {
                                         ...state,
                                         justifyContent: 'flex-start'
@@ -51,7 +46,6 @@ const Swiper = () => {
                                     return state
                                 })
                             }
-                            // console.log(performance.now() - start, "____")
                         }, timeout)
                     }
                 }
@@ -69,15 +63,11 @@ const Swiper = () => {
         
         let a = e.currentTarget
         let id = e.currentTarget.dataset.id
-        console.log("leave ", id)
         a.classList.remove("is-hover-active-play")
-        // console.log(performance.now() - scaleStack[id].t)
-        console.log(scaleStack)
         if(performance.now() - scaleStack[id].t < timeout) {
             clearTimeout(scaleStack[id].c)
         }
         
-        // clearTimeout(delayHandler)
     }
     return <>
         <div id="home_v3_module_page_switch" className="home-page-switch-wrapper inner-content-wrapper">
