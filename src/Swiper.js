@@ -8,7 +8,7 @@ const Swiper = () => {
     let [items, setItem] = useState([])
     let [containerStyle, setStyle] = useState({ justifyContent: "flex-start" })
     let [scaleStack, setScaleStack] = useState({})
-    const timeout = 300
+    const timeout = 400
     useEffect(() => {
         setItem((item) => [1, 2, 3, 4, 5, 6])
 
@@ -18,11 +18,11 @@ const Swiper = () => {
         let a = e.currentTarget
 
         let id = e.currentTarget.dataset.id
-        
+        // console.log("enter ", id)
         // setDelayHandler(setTimeout(() => {
         if (!a.classList.contains('is-hover-active-play')) {
             let start = performance.now()
-            
+            console.log("enter ", id)
             setScaleStack((items) => {
                 return {
                     ...items,
@@ -66,8 +66,10 @@ const Swiper = () => {
 
     }
     const onMouseLeave = (e) => {
+        
         let a = e.currentTarget
         let id = e.currentTarget.dataset.id
+        console.log("leave ", id)
         a.classList.remove("is-hover-active-play")
         // console.log(performance.now() - scaleStack[id].t)
         console.log(scaleStack)
@@ -83,7 +85,7 @@ const Swiper = () => {
                 <div className="inner-content-body-container">
                     <div className="inner-content-body" style={containerStyle}>
                         {
-                            items.map((k, v) => <div data-id={v} onMouseOver={onMouseOver} onMouseLeave={onMouseLeave} style={{ marginRight: "15px", background: "rgba(137, 88, 236, 0.1)" }} className="hot-ranking-cell-wrapper inner-content-item is-hover-animation-active" key={k + 'img'}
+                            items.map((k, v) => <div data-id={v} onMouseEnter={onMouseOver} onMouseLeave={onMouseLeave} style={{ marginRight: "15px", background: "rgba(137, 88, 236, 0.1)" }} className="hot-ranking-cell-wrapper inner-content-item is-hover-animation-active" key={k + 'img'}
                             // onMouseOver={onMouseOver}
                             // 
                             >
